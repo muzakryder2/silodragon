@@ -554,8 +554,8 @@ button {
   .features {
     min-height: unset;
     height: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 
   .features h2 {
