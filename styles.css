@@ -508,7 +508,7 @@ button {
 
 @media (max-width: 768px) {
   .header {
-    height: 475px;
+    height: 500px;
   }
 
   .logo {
@@ -526,6 +526,10 @@ button {
     left: 49%;
     top: 225px;
     transform: translateX(-50%);
+  }
+
+  .signup-form p {
+    text-align: center;
   }
 
   .description {
@@ -569,8 +573,12 @@ button {
   }
 
   .gridItem h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     width: max-content;
+  }
+
+  .gridItem p {
+    font-size: 0.9em;
   }
 
   .appIntegrations {
@@ -589,7 +597,7 @@ button {
 
   .footer .linkWrapper ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem 1.5rem;
     align-items: center;
     justify-content: center;
@@ -598,9 +606,12 @@ button {
 
   .footer .linkWrapper li {
     border: none;
+    font-size: 0.8rem;
   }
 
   .footer .legal p {
+    text-align: center;
     font-size: 0.7rem;
+    padding: 0 0.5rem;
   }
 }
