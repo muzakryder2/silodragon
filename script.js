@@ -7,32 +7,21 @@ const moreMenuBtn = document.getElementById("moreBtn");
 const moreMenu = document.getElementById("moreMenu");
 
 function openFeaturesMenu() {
-  featuresMenuBtn.childNodes[1].classList.add("open");
-  featuresMenu.classList.add("show");
+  featuresMenuBtn.childNodes[1].classList.toggle("open");
   moreMenuBtn.childNodes[1].classList.remove("open");
+  featuresMenu.classList.toggle("show");
   moreMenu.classList.remove("show");
-}
-function closeFeaturesMenu() {
-  featuresMenuBtn.childNodes[1].classList.remove("open");
-  featuresMenu.classList.remove("show");
 }
 
 function openMoreMenu() {
-  moreMenuBtn.childNodes[1].classList.add("open");
-  moreMenu.classList.add("show");
+  moreMenuBtn.childNodes[1].classList.toggle("open");
   featuresMenuBtn.childNodes[1].classList.remove("open");
+  moreMenu.classList.toggle("show");
   featuresMenu.classList.remove("show");
 }
 
-function closeMoreMenu() {
-  moreMenuBtn.childNodes[1].classList.remove("open");
-  moreMenu.classList.remove("show");
-}
-
-featuresMenuBtn.addEventListener("mouseover", openFeaturesMenu);
-featuresMenuWrapper.addEventListener("mouseleave", closeFeaturesMenu);
-moreMenuBtn.addEventListener("mouseover", openMoreMenu);
-moreMenuWrapper.addEventListener("mouseleave", closeMoreMenu);
+featuresMenuBtn.addEventListener("click", openFeaturesMenu);
+moreMenuBtn.addEventListener("click", openMoreMenu);
 
 // Mobile Nav
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
