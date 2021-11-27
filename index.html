@@ -10,6 +10,7 @@
       src="https://kit.fontawesome.com/d0ce1e2c19.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js" defer></script>
     <title>Silo Dragon - Inventory Management System</title>
   </head>
   <body>
@@ -21,15 +22,132 @@
       />
       <nav class="nav">
         <ul>
-          <li>Features<i class="fas fa-chevron-down"></i></li>
+          <li id="featuresBtn">Features<i class="fas fa-chevron-down"></i></li>
           <li>Pricing & Sign-Up</li>
-          <li>More<i class="fas fa-chevron-down"></i></li>
-          <li>Login<i class="fas fa-chevron-down"></i></li>
+          <li id="moreBtn">More<i class="fas fa-chevron-down"></i></li>
+          <li class="loginLink">Login</li>
         </ul>
+        <!-- Drop-down Menus -->
+        <div id="featuresMenuWrapper">
+          <div id="featuresMenu" class="featuresMenu">
+            <div>
+              <p>Inventory</p>
+              <ul>
+                <li>Inventory Management in the Cloud</li>
+                <li>Multi-Warehouse Locations and Zones</li>
+                <li>Item Variations using Attributes</li>
+                <li>Barcoding and Barcode Scanning</li>
+              </ul>
+            </div>
+            <div>
+              <p>Account Management</p>
+              <ul>
+                <li>Customers, Prospects, Suppliers (CRM)</li>
+              </ul>
+            </div>
+            <div>
+              <p>Orders</p>
+              <ul>
+                <li>Invoives and Estimates</li>
+                <li>Purchase Orders</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="moreMenuWrapper">
+          <div id="moreMenu" class="moreMenu">
+            <div>
+              <p>What's New</p>
+              <ul>
+                <li>News and Updates</li>
+              </ul>
+            </div>
+            <div>
+              <p>Technical Support</p>
+              <ul>
+                <li>Knowledge Base</li>
+                <li>Support Center</li>
+                <li>API Documentation</li>
+              </ul>
+            </div>
+            <div>
+              <p>About Us</p>
+              <ul>
+                <li>Who We Are</li>
+                <li>What Sets Us Apart</li>
+                <li>Our Technology</li>
+                <li>Media Kit</li>
+                <li>Jobs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile Menu -->
+      <nav class="mobileNav" id="mobileMenu">
+        <p>Silo Dragon</p>
+        <div id="mobileMenuBtn" class="menuDown">
+          <i class="far fa-caret-square-down"></i>
+        </div>
+        <div id="mobileNavbar">
+          <ul>
+            <li class="topLevel">
+              <p id="features">Features<i class="fas fa-chevron-down"></i></p>
+              <ul id="featuresSubmenu" class="lowLevel closed">
+                <li><p>Inventory</p></li>
+                <ul>
+                  <li>Inventory Management in the Cloud</li>
+                  <li>Multi-Warehouse Locations and Zones</li>
+                  <li>Item Variations using Attributes</li>
+                  <li>Barcoding and Barcode Scanning</li>
+                </ul>
+                <li><p>Account Management</p></li>
+                <ul>
+                  <li>Customers, Prospects, Suppliers (CRM)</li>
+                </ul>
+                <li><p>Orders</p></li>
+                <ul>
+                  <li>Invoives and Estimates</li>
+                  <li>Purchase Orders</li>
+                </ul>
+              </ul>
+            </li>
+            <li class="topLevel"><p>Pricing & Sign-Up</p></li>
+            <li class="topLevel">
+              <p id="more">More<i class="fas fa-chevron-down"></i></p>
+              <ul id="moreSubmenu" class="lowLevel closed">
+                <li><p>What's New</p></li>
+                <ul>
+                  <li>News and Updates</li>
+                </ul>
+                <li><p>Technical Support</p></li>
+                <ul>
+                  <li>Knowledge Base</li>
+                  <li>Support Center</li>
+                  <li>API Documentation</li>
+                </ul>
+              </ul>
+            </li>
+            <li class="topLevel"><p>Contact Us</p></li>
+            <li class="topLevel">
+              <p id="aboutUs">About Us<i class="fas fa-chevron-down"></i></p>
+              <ul id="aboutUsSubmenu" class="lowLevel closed">
+                <li><p>Who We Are</p></li>
+                <ul>
+                  <li>What Sets Us Apart</li>
+                  <li>Our Technology</li>
+                  <li>Media Kit</li>
+                  <li>Jobs</li>
+                </ul>
+              </ul>
+            </li>
+            <li class="topLevel"><p>Login</p></li>
+          </ul>
+        </div>
       </nav>
       <form class="signup-form" action="submit">
         <p>Setup Your Free Account</p>
-        <input type="text" placeholder="Enter your email address..." />
+        <input type="text" placeholder="email address" />
         <button type="submit">Create New Account</button>
       </form>
     </header>
