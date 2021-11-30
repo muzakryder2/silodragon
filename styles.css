@@ -621,7 +621,6 @@ i {
   }
 
   .features {
-    min-height: unset;
     height: auto;
   }
 
@@ -636,7 +635,7 @@ i {
   }
 
   .gridItem h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     width: max-content;
   }
 
@@ -663,19 +662,8 @@ i {
   }
 
   .signup-form {
-    right: 100px;
-  }
-
-  .description {
-    height: auto;
-  }
-
-  .description h1 {
-    font-size: 2rem;
-  }
-
-  .description p {
-    font-size: 1.25rem;
+    right: 50%;
+    transform: translateX(50%);
   }
 
   .video {
@@ -684,23 +672,23 @@ i {
   }
 
   .features {
-    min-height: unset;
-    height: auto;
     padding-left: 0;
     padding-right: 0;
   }
 
   .featuresGrid {
     display: flex;
-    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw - 50px);
+    height: 300px;
     position: relative;
     grid-template-columns: none;
     gap: 0;
-    height: 30vh;
   }
 
   .features h2 {
-    margin: 0 auto 1rem auto;
+    margin: 1rem;
     font-size: 2rem;
   }
 
@@ -708,13 +696,14 @@ i {
     display: block;
     position: absolute;
     top: 30%;
-    left: 0;
+    left: -25px;
     font-size: 2rem;
     color: #ffffff;
     cursor: pointer;
     background-color: unset;
     transform: scale(1);
     transition: transform 0.25s ease;
+    z-index: 20;
   }
 
   #leftSliderArrow:hover {
@@ -725,13 +714,14 @@ i {
     display: block;
     position: absolute;
     top: 30%;
-    right: 0;
+    right: -25px;
     font-size: 2rem;
     color: #ffffff;
     cursor: pointer;
     background-color: unset;
     transform: scale(1);
     transition: transform 0.25s ease;
+    z-index: 20;
   }
 
   #rightSliderArrow:hover {
@@ -740,13 +730,8 @@ i {
 
   .gridItem {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 70%;
-    height: max-content;
+    width: 65vw;
     border-radius: 0;
-    padding: 0;
     opacity: 0;
     transition: opacity 0.75s ease;
   }
@@ -757,24 +742,6 @@ i {
 
   .gridItem h3 {
     font-size: 1.5rem;
-    width: max-content;
-    margin-top: 1rem;
-  }
-
-  .right {
-    transform: translateX(100vh);
-  }
-
-  .left {
-    transform: translateX(-100vh);
-  }
-
-  .appIntegrations h2 {
-    font-size: 2rem;
-  }
-
-  .appImgWrapper img {
-    width: 75px;
   }
 
   .footer .linkWrapper ul {
@@ -796,23 +763,8 @@ i {
     height: 500px;
   }
 
-  .logo {
-    display: none;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .mobileNav {
-    display: flex;
-  }
-
   .signup-form {
-    width: 65%;
-    left: 49%;
-    top: 225px;
-    transform: translateX(-50%);
+    width: 90%;
   }
 
   .signup-form p {
@@ -820,48 +772,15 @@ i {
   }
 
   .description {
-    height: auto;
     padding: 5% 5%;
   }
 
-  .description h1 {
-    font-size: 2rem;
-  }
-
-  .description p {
-    font-size: 1.25rem;
-  }
-
   .video {
-    min-height: unset;
-    padding: 3rem 0;
     background-color: var(--clr-dark);
   }
 
   .video video {
     width: 90%;
-  }
-
-  .features {
-    min-height: unset;
-    height: auto;
-    padding-left: 0rem;
-    padding-right: 0rem;
-  }
-
-  .features h2 {
-    font-size: 2rem;
-  }
-
-  .featuresGrid {
-    grid-template-columns: 1fr;
-    gap: 3rem 0;
-    width: 100%;
-  }
-
-  .gridItem h3 {
-    font-size: 1.25rem;
-    width: max-content;
   }
 
   .gridItem p {
@@ -871,6 +790,10 @@ i {
   .appIntegrations {
     padding: 0;
     background-color: #ffffff;
+  }
+
+  .appIntegrations .frostWrapper {
+    width: 100%;
   }
 
   .appIntegrations h2 {
@@ -883,16 +806,10 @@ i {
   }
 
   .footer .linkWrapper ul {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem 1.5rem;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
   }
 
   .footer .linkWrapper li {
-    border: none;
     font-size: 0.8rem;
   }
 
