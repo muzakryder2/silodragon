@@ -783,6 +783,10 @@ i {
     width: 90%;
   }
 
+  .gridItem {
+    padding: 0;
+  }
+
   .gridItem p {
     font-size: 0.9em;
   }
@@ -817,5 +821,11 @@ i {
     text-align: center;
     font-size: 0.7rem;
     padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .gridItem h3 {
+    font-size: 1rem;
   }
 }
