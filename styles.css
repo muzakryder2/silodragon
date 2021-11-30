@@ -460,6 +460,14 @@ i {
   font-size: 1.25rem;
 }
 
+#leftSliderArrow {
+  display: none;
+}
+
+#rightSliderArrow {
+  display: none;
+}
+
 .gridItem {
   color: rgb(255 255 255 / 0.8);
   padding: 1rem;
@@ -615,8 +623,6 @@ i {
   .features {
     min-height: unset;
     height: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   .features h2 {
@@ -680,23 +686,87 @@ i {
   .features {
     min-height: unset;
     height: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .features h2 {
-    font-size: 2rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .featuresGrid {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem 0;
-    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    grid-template-columns: none;
+    gap: 0;
+    height: 30vh;
+  }
+
+  .features h2 {
+    margin: 0 auto 1rem auto;
+    font-size: 2rem;
+  }
+
+  #leftSliderArrow {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: unset;
+    transform: scale(1);
+    transition: transform 0.25s ease;
+  }
+
+  #leftSliderArrow:hover {
+    transform: scale(1.1);
+  }
+
+  #rightSliderArrow {
+    display: block;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: unset;
+    transform: scale(1);
+    transition: transform 0.25s ease;
+  }
+
+  #rightSliderArrow:hover {
+    transform: scale(1.1);
+  }
+
+  .gridItem {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 70%;
+    height: max-content;
+    border-radius: 0;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 0.75s ease;
+  }
+
+  .gridItem.activeSlide {
+    opacity: 1;
   }
 
   .gridItem h3 {
     font-size: 1.5rem;
     width: max-content;
+    margin-top: 1rem;
+  }
+
+  .right {
+    transform: translateX(100vh);
+  }
+
+  .left {
+    transform: translateX(-100vh);
   }
 
   .appIntegrations h2 {

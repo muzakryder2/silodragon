@@ -72,3 +72,35 @@ function openAboutUsSubmenu() {
 featuresDrop.addEventListener("click", openfeaturesSubmenu);
 moreDrop.addEventListener("click", openMoreSubmenu);
 aboutUsDrop.addEventListener("click", openAboutUsSubmenu);
+
+// Carousel
+
+var leftArrow = document.getElementById('leftSliderArrow')
+var rightArrow = document.getElementById('rightSliderArrow')
+const slides = document.querySelectorAll('.gridItem')
+var position = 0
+
+function slideLeft(){
+  let activeSlide = document.querySelector('.activeSlide')
+  activeSlide.classList.remove('activeSlide')
+  position--
+  if(position < 0){
+    position = slides.length - 1
+  }
+  activeSlide = slides[position]
+  activeSlide.classList.add('activeSlide')
+}
+
+function slideRight(){
+  let activeSlide = document.querySelector('.activeSlide')
+  activeSlide.classList.remove('activeSlide')
+  position++
+  if(position > slides.length -1){
+    position = 0
+  }
+  activeSlide = slides[position]
+  activeSlide.classList.add('activeSlide')
+}
+
+leftArrow.addEventListener('click', slideLeft)
+rightArrow.addEventListener('click', slideRight)
